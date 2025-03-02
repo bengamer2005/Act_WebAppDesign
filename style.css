@@ -83,3 +83,26 @@ footer{
     bottom: 0;
     width: 99%;
 }
+
+.image-container {
+    width: 60%;
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: flex;
+    justify-content: center; /* Centrar contenido */
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 50%; /* Ajustar el tamaño de la imagen */
+    height: auto;
+    display: block;
+}
+
+.nombre-apellido {
+    position: absolute;
+    left: 10%; /* Colocar en el lado izquierdo */
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
