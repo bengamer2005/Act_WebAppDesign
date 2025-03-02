@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let imageUrl = parts[2]?.trim();
 
         if (!isValidUrl(imageUrl)) {
-            imageUrl = "https://m.media-amazon.com/images/S/pv-target-images/81ef275effa427553a847bc220bebe1dc314b2e79d00333f94a6bcadd7cce851.jpg";
+            imageUrl = "https://images.freeimages.com/clg/istock/previews/9420/94202953-male-unknown-user-social-icon-isolated-vector-image.jpg";
         }
 
         return { name, surname, imageUrl };
