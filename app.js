@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         img.style.height = "auto";
         img.style.objectFit = "cover";
 
-        img.onerror = () => img.src = "https://via.placeholder.com/150";
+        img.onerror = () => img.src = "img_desconocida.jpeg";
 
         imgContainer.appendChild(img);
         itemDiv.append(textContainer, imgContainer);
