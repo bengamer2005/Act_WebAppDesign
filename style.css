@@ -1,0 +1,85 @@
+*{
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-image: url(fondo.png);
+    background-position: center;
+    background-size: 50%;
+}
+
+header p{
+    color: white;
+    text-align: center;
+    padding: 3.5%;
+    font-size: 3.5rem;
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em rgb(0, 0, 0),
+    0 0 0.2em rgb(0, 0, 0);
+}
+
+body{
+    background-color: lightgray;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+/*--------- form ---------*/
+
+.form-control{
+    width: 50%;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #000000;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: rgb(0, 0, 0);
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: rgb(34, 34, 34);
+    transform: translateY(-30px);
+}
+
+/*--------- footer ---------*/
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 99%;
+}
