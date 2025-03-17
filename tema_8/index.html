@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Actividades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Gestión de Actividades</h1>
+
+    <!-- Selección de Tema -->
+    <label for="temaSelect">Selecciona un tema:</label>
+    <select id="temaSelect">
+        <option value="">Selecciona un tema</option>
+    </select>
+
+    <!-- Formulario para Agregar Actividades -->
+    <h2>Agregar Nueva Actividad</h2>
+    <form id="actividadForm" class="form">
+        <label for="tipoActividad">Tipo de Actividad:</label>
+        <input type="text" id="tipoActividad" required>
+
+        <label for="calificacion">Calificación:</label>
+        <input type="number" id="calificacion" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+
+        <label for="calificacionOpcional">Calificación Opcional:</label>
+        <input type="number" id="calificacionOpcional">
+
+        <button type="submit">Agregar Actividad</button>
+    </form>
+
+    <!-- Tabla de Actividades -->
+    <h2>Actividades del Tema</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Calificación</th>
+                <th>Fecha</th>
+                <th>Opcional</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="actividadLista"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
