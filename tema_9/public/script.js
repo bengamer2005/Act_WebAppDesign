@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //Editar un superhéroe
     window.editHero = async (id) => {
         const newName = prompt("Nuevo nombre del superhéroe:")
         const newRealName = prompt("Nuevo nombre real:")
