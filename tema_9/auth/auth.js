@@ -1,4 +1,5 @@
 const User = require("../models/User.model")
+const sendEmail = require("../services/email.service")
 
 const register = async (req, res) => {
     const { username, password } = req.body;
@@ -9,9 +10,10 @@ const register = async (req, res) => {
 
     try {
         const user = await User.create({ username, password })
-
         req.session.user = user
         
+        await sendEmail(username, "Bienvenido a Comic Verse", "¡Gracias por registrarte en nuestra plataforma!")
+
         res.status(200).json({ message: "Usuario creado con éxito", user })
     } catch (error) {
         res.status(401).json({ message: "El usuario no fue creado", error: error.message })
@@ -32,6 +34,9 @@ const login = async (req, res) => {
             return res.status(401).json({ message: "Inicio de sesión no exitoso", error: "Usuario no encontrado" })
         } else {
             req.session.user = user
+
+            await sendEmail(username, "Alerta de inicio de sesión", "Se ha iniciado sesión en tu cuenta.")
+
             return res.status(200).json({ message: "Inicio de sesión exitoso", user })
         }
     } catch (error) {
