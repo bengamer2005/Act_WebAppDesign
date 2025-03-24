@@ -1,3 +1,7 @@
+*{
+    font-family: Arial, sans-serif;
+  }
+
 header {
     background-image: url(../views/fondo.png);
     background-position: center;
